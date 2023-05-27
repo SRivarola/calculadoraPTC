@@ -50,7 +50,7 @@ export default function App() {
           <div className='w-[85%] h-[80px] py-2 px-[5%] flex justify-center items-center gap-5 rounded-lg bg-[#982781] text-white'>
             <img src='./celula.jpg' alt='imagen de celula' className='rounded-full h-full'/>
             <div>
-              <h2 className='text-xl font-semibold'>Triglicéridos mayores a 880 mg/dl*</h2>
+              <h2 className='text-base md:text-xl font-semibold'>Triglicéridos mayores a 880 mg/dl*</h2>
               <p className='text-xs'>*Sin respuesta a terapia hipolipemiante convencional</p>
             </div>
           </div>
