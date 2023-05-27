@@ -47,7 +47,7 @@ export default function App() {
     <>
       <main className="flex min-h-screen w-full lg:w-[50%] flex-col items-start justify-start p-3 md:py-4 md:px-5 text-sm bg-transparent">
         <div className='w-full flex justify-center z-50'>
-          <div className='relative w-[85%] h-[80px] py-2 px-[3%] md:px-[5%] flex justify-center items-center gap-3 md:gap-5 rounded-lg bg-[#982781] text-white'>
+          <div className='relative w-[90%] h-[80px] py-2 px-[3%] md:px-[5%] flex justify-center items-center gap-3 md:gap-5 rounded-lg bg-[#982781] text-white'>
             <img src='./celula.jpg' alt='imagen de celula' className='relative rounded-full w-[45px] md:w-[65px]'/>
             <div>
               <h2 className='text-sm md:text-xl font-semibold'>Triglicéridos mayores a 880 mg/dl*</h2>
