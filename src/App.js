@@ -45,7 +45,7 @@ export default function App() {
   
   return (
     <>
-      <main className="p-4 flex min-h-screen w-full lg:w-[50%] flex-col items-start justify-start px-5 text-sm bg-transparent">
+      <main className="flex min-h-screen w-full lg:w-[50%] flex-col items-start justify-start py-2 md:py-4 px-3 md:px-5 text-sm bg-transparent">
         <div className='w-full flex justify-center z-50'>
           <div className='relative w-[85%] h-[80px] py-2 px-[5%] flex justify-center items-center gap-5 rounded-lg bg-[#982781] text-white'>
             <img src='./celula.jpg' alt='imagen de celula' className='relative rounded-full w-[40px] md:w-[65px]'/>
