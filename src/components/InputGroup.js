@@ -3,7 +3,7 @@ const InputGroup = ({ label, id, span, name, value = 1, onChange, checked }) => 
     <div className='flex mx-4 py-2 justify-between border-b border-[#982781]'>
         <label className="flex flex-col">
             <p className="font-semibold">{label}</p>
-            <span className="text-sm">{span}</span>
+            <span className="text-xs md:text-sm">{span}</span>
         </label>
         <div className="flex gap-4">
           <div className="flex items-center gap-2">
