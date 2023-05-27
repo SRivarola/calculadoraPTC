@@ -75,7 +75,7 @@ console.log(waNumber)
             </div>
             <div className='relative w-full flex flex-col sm:flex-row justify-between items-center gap-4 my-2 rounded-[35px]'>
                 <input 
-                    className='w-full h-[45px] rounded-3xl border border-[#7a3e8870] shadow-md shadow-[#7a3e8870] pl-5 italic font-normal focus:outline-none'
+                    className='w-full h-[45px] rounded-3xl border border-[#7a3e8870] shadow shadow-[#7a3e8870] pl-5 italic font-normal focus:outline-none'
                     placeholder='ingrese el número al que desea enviar'
                     type='number'
                     value={waNumber}
@@ -101,7 +101,7 @@ console.log(waNumber)
             </div>
             <button
                 onClick={resetAllValues} 
-                className='w-full h-[45px] rounded-3xl border mt-10 mb-4 py-2 shadow-md font-semibold tracking-widest'
+                className='w-full h-[45px] rounded-3xl border border-[#722882] mt-10 mb-4 py-2 shadow-md font-semibold tracking-widest'
             >
                 RESETEAR RESULTADOS
             </button>
