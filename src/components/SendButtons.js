@@ -75,7 +75,7 @@ console.log(waNumber)
             </div>
             <div className='relative w-full flex flex-col sm:flex-row justify-between items-center gap-4 my-2 rounded-[35px]'>
                 <input 
-                    className='w-full h-[45px] rounded-3xl border border-[#7a3e8870] shadow shadow-[#7a3e8870] pl-5 italic font-normal focus:outline-none'
+                    className='w-full h-[45px] rounded-3xl border border-[#7a3e8870] shadow-md pl-5 italic font-normal focus:outline-none'
                     placeholder='ingrese el número al que desea enviar'
                     type='number'
                     value={waNumber}
