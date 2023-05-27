@@ -5,7 +5,7 @@ const InputGroup = ({ label, id, span, name, value = 1, onChange, checked }) => 
             <p className="font-semibold">{label}</p>
             <span className="text-xs md:text-sm">{span}</span>
         </label>
-        <div className="flex gap-4">
+        <div className="flex gap-2 md:gap-4">
           <div className="flex items-center gap-2">
             <label className="flex items-center gap-1 cursor-pointer" htmlFor={id}>
               SI
