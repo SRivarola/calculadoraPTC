@@ -5,8 +5,8 @@ const InputAyunoGroup = ({onChange, checked}) => {
             <p className="font-semibold">TG en ayuno:</p>
         </div>
         <div className="flex justify-start items-center gap-5">
-            <label className="w-full flex justify-between items-center gap-2 cursor-pointer" htmlFor="1">
-                <p>{'>880 mg/dl en 3 mediciones consecutivas'}</p>
+            <label className="w-full flex justify-end items-center gap-2 cursor-pointer" htmlFor="1">
+                <p className={`${checked === 5 ? 'font-semibold' : ''}`}>{'>880 mg/dl en 3 mediciones consecutivas'}</p>
                 <span className={`flex justify-center items-center w-[20px] h-[20px] bg-white rounded-full border border-[#982781] labelPintado ${checked === 5 ? ' after:opacity-100' : ' after:opacity-0'}`}></span>
             </label>
             <input
@@ -20,8 +20,8 @@ const InputAyunoGroup = ({onChange, checked}) => {
             />
         </div>
         <div className="flex justify-start items-center gap-5">
-            <label className="w-full flex justify-between items-center gap-2 cursor-pointer" htmlFor="2">
-                {'≥1770 mg/dl al menos una vez'}
+            <label className="w-full flex justify-end items-center gap-2 cursor-pointer" htmlFor="2">
+                <p className={`${checked === 1 ? 'font-semibold' : ''}`}>{'≥1770 mg/dl al menos una vez'}</p>
                 <span className={`flex justify-center items-center w-[20px] h-[20px] bg-white rounded-full border border-[#982781] labelPintado ${checked === 1 ? ' after:opacity-100' : ' after:opacity-0'}`}></span>    
             </label>
             <input

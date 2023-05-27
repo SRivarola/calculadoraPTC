@@ -5,8 +5,8 @@ const InputEdadGroup = ({onChange, checked}) => {
             <p className="font-semibold">Edad de inicio de síntomas:</p>
         </div>
         <div className="flex justify-end items-center gap-5">
-            <label className="w-full flex justify-between items-center gap-2 cursor-pointer" htmlFor='edad1'>
-                <p>{'< 40 años'}</p>
+            <label className="w-full flex justify-end items-center gap-2 cursor-pointer" htmlFor='edad1'>
+                <p className={`${checked === 1 ? 'font-semibold' : ''}`}>{'< 40 años'}</p>
                 <span className={`flex justify-center items-center w-[20px] h-[20px] rounded-full bg-white border border-[#982781] labelPintado ${checked === 1 ? ' after:opacity-100' : ' after:opacity-0'}`}></span>
             </label>
             <input
@@ -20,8 +20,8 @@ const InputEdadGroup = ({onChange, checked}) => {
             />
         </div>
         <div className="flex justify-end items-center gap-5">
-            <label className="w-full flex justify-between items-center gap-2 cursor-pointer" htmlFor='edad2' >
-                <p>{'< 20 años'}</p>
+            <label className="w-full flex justify-end items-center gap-2 cursor-pointer" htmlFor='edad2' >
+                <p className={`${checked === 2 ? 'font-semibold' : ''}`}>{'< 20 años'}</p>
                 <span className={`flex justify-center items-center w-[20px] h-[20px] rounded-full bg-white border border-[#982781] labelPintado ${checked === 2 ? ' after:opacity-100' : ' after:opacity-0'}`}></span>
             </label>
             <input
@@ -35,8 +35,8 @@ const InputEdadGroup = ({onChange, checked}) => {
             />
         </div>
         <div className="flex justify-end items-center gap-5">
-            <label className="w-full flex justify-between items-center gap-2 cursor-pointer" htmlFor='edad3' >
-                <p>{'< 10 años'}</p>
+            <label className="w-full flex justify-end items-center gap-2 cursor-pointer" htmlFor='edad3' >
+                <p className={`${checked === 3 ? 'font-semibold' : ''}`}>{'< 10 años'}</p>
                 <span className={`flex justify-center items-center w-[20px] h-[20px] rounded-full bg-white border border-[#982781] labelPintado ${checked === 3 ? ' after:opacity-100' : ' after:opacity-0'}`}></span>
             </label>
             <input

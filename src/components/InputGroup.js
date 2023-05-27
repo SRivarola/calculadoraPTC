@@ -7,7 +7,7 @@ const InputGroup = ({ label, id, span, name, value = 1, onChange, checked }) => 
         </label>
         <div className="flex gap-2 md:gap-4">
           <div className="flex items-center gap-2">
-            <label className="flex items-center gap-1 cursor-pointer" htmlFor={id}>
+            <label className={`flex items-center gap-1 cursor-pointer ${checked === value ? 'font-semibold' : ''}`} htmlFor={id}>
               SI
               <span className={`flex justify-center items-center w-[20px] h-[20px] rounded-full bg-white border border-[#982781] labelPintado ${checked === value ? ' after:opacity-100' : ' after:opacity-0'}`}></span>
             </label>
@@ -22,7 +22,7 @@ const InputGroup = ({ label, id, span, name, value = 1, onChange, checked }) => 
             />
           </div>
           <div className="flex items-center gap-2">
-            <label className="flex items-center gap-1 cursor-pointer" htmlFor={id+'0'}>
+            <label className={`flex items-center gap-1 cursor-pointer  ${checked === 0 ? 'font-semibold' : ''}`} htmlFor={id+'0'}>
               NO
               <span className={`relative flex justify-center items-center w-[20px] h-[20px] bg-white rounded-full border border-[#982781] labelPintado ${checked === 0 ? ' after:opacity-100' : ' after:opacity-0'}`}></span>
             </label>
