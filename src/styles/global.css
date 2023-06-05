@@ -42,3 +42,7 @@ input:focus, input:target{
     background-color: #982781;
     border-radius: 50%;
 }
+
+.backgroundGradient {
+    background-image: linear-gradient(90deg, #3d3dc9, #6a5d95, #c64b68);
+}
