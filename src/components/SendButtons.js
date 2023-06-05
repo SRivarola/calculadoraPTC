@@ -75,7 +75,7 @@ const SendButtons = ({data, total, resetForm}) => {
             </div>
             <div className='relative w-full flex flex-col sm:flex-row justify-between items-center gap-0 my-2 rounded-[35px]'>
                 <input 
-                    className='w-full h-[45px] rounded-t-3xl sn:rounded-tr-none sm:rounded-l-3xl text-center sm:text-left border border-[#7a3e8870] sm:border-r-0 shadow-md md:pl-6 italic font-normal focus:outline-none'
+                    className='w-full h-[45px] rounded-t-3xl sm:rounded-tr-none sm:rounded-l-3xl text-center sm:text-left border border-[#7a3e8870] sm:border-r-0 shadow-md sm:pl-6 italic font-normal focus:outline-none'
                     placeholder='ingrese el número al que desea enviar'
                     type='number'
                     value={waNumber}
