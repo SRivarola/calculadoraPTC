@@ -42,7 +42,7 @@ const SendButtons = ({data, total, resetForm}) => {
             setEsValido(false)
         }
     }, [data]);
-console.log(waNumber)
+
   return (
     <>
         {
@@ -73,26 +73,26 @@ console.log(waNumber)
                     <GrMail className='text-xl'/>
                 </button>
             </div>
-            <div className='relative w-full flex flex-col sm:flex-row justify-between items-center gap-4 my-2 rounded-[35px]'>
+            <div className='relative w-full flex flex-col sm:flex-row justify-between items-center gap-0 my-2 rounded-[35px]'>
                 <input 
-                    className='w-full h-[45px] rounded-3xl border border-[#7a3e8870] shadow-md pl-5 italic font-normal focus:outline-none'
+                    className='w-full h-[45px] rounded-t-3xl md:rounded-tr-none md:rounded-l-3xl text-center md:text-left border border-[#7a3e8870] md:border-r-0 shadow-md md:pl-6 italic font-normal focus:outline-none'
                     placeholder='ingrese el número al que desea enviar'
                     type='number'
                     value={waNumber}
                     onChange={(e) => setWaNumber(e.target.value)}
                 />
                 {
-                    waNumber !== '' ? (
+                    waNumber.length > 6 ? (
                         <ReactWhatsapp 
                             number={waNumber} 
                             message={bodyResultWa(data, total)} 
-                            className='flex justify-center items-center gap-3 h-[45px] w-full bg-[#722882] text-white font-semibold px-3 py-1 rounded-3xl shadow-md outline-none focus:outline-none tracking-widest'
+                            className='flex justify-center items-center gap-3 h-[45px] w-full bg-[#722882] text-white font-semibold px-3 py-1 rounded-b-3xl md:rounded-bl-none md:rounded-r-3xl shadow-md outline-none focus:outline-none tracking-widest'
                         >
                             ENVIAR 
                             <ImWhatsapp className='text-xl'/>
                         </ReactWhatsapp>
                     ) : (
-                        <div className='flex justify-center items-center gap-3 h-[45px] w-full bg-[#722882] text-white font-semibold px-3 py-1 rounded-3xl shadow-md outline-none focus:outline-none tracking-widest'>
+                        <div className='flex justify-center items-center gap-3 h-[45px] w-full bg-[#722882] text-white font-semibold px-3 py-1 rounded-b-3xl md:rounded-bl-none md:rounded-r-3xl shadow-md outline-none focus:outline-none tracking-widest'>
                             CARGAR NUMERO 
                             <ImWhatsapp className='text-xl'/>
                         </div>
