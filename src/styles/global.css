@@ -67,10 +67,10 @@ input:focus, input:target{
     }
 
     .inputWhatsapp {
-        @apply rounded-tr-none rounded-l-3xl text-left border-r-0 pl-6 w-[60%]
+        @apply rounded-tr-none rounded-l-3xl text-left border-r-0 pl-6
     }
 
     .buttonWhatsapp {
-        @apply rounded-bl-none rounded-r-3xl w-[40%]
+        @apply rounded-bl-none rounded-r-3xl
     }
 }
