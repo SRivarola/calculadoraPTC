@@ -106,7 +106,7 @@ const SendButtons = ({data, total, resetForm}) => {
                 RESETEAR RESULTADOS
             </button>
           </>) : (
-            <div className='w-full flex flex-col sm:flex-row justify-center items-center gap-4 my-6'>
+            <div className='textoResultado w-full flex flex-col justify-center items-center gap-4 my-6'>
                 Para enviar los resultados se deben completar todos los campos
             </div>
           )

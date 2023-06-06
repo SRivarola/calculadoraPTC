@@ -57,6 +57,10 @@ input:focus, input:target{
     @apply text-[0.8rem] font-semibold
 }
 
+.textoResultado {
+    @apply text-xs
+}
+
 .inputWhatsappContainer{
     @apply flex flex-col
 }
@@ -85,5 +89,9 @@ input:focus, input:target{
 
     .titulo {
         @apply text-xl
+    }
+
+    .textoResultado {
+        @apply text-base
     }
 }
