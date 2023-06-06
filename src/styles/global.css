@@ -53,6 +53,9 @@ input:focus, input:target{
     background-image: linear-gradient(90deg, #3d3dc9, #6a5d95, #c64b68);
 }
 
+.titulo {
+    @apply text-[0.8rem] font-semibold
+}
 
 .inputWhatsappContainer{
     @apply flex flex-col
@@ -78,5 +81,9 @@ input:focus, input:target{
 
     .buttonWhatsapp {
         @apply rounded-bl-none rounded-r-3xl
+    }
+
+    .titulo {
+        @apply text-xl
     }
 }
