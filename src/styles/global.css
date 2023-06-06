@@ -46,3 +46,31 @@ input:focus, input:target{
 .backgroundGradient {
     background-image: linear-gradient(90deg, #3d3dc9, #6a5d95, #c64b68);
 }
+
+
+.inputWhatsappContainer{
+    @apply flex flex-col
+}
+
+.inputWhatsapp{
+    @apply rounded-t-3xl w-full h-[45px] text-center border border-[#7a3e8870] shadow-md italic font-normal focus:outline-none
+}
+
+.buttonWhatsapp{
+    @apply flex justify-center items-center gap-3 h-[45px] w-full bg-[#722882] text-white font-semibold px-3 py-1 rounded-b-3xl shadow-md outline-none focus:outline-none tracking-widest
+}
+
+@media (min-width: 500px) {
+
+    .inputWhatsappContainer {
+        @apply flex-row
+    }
+
+    .inputWhatsapp {
+        @apply rounded-tr-none rounded-l-3xl text-left border-r-0 pl-6 w-[60%]
+    }
+
+    .buttonWhatsapp {
+        @apply rounded-bl-none rounded-r-3xl w-[40%]
+    }
+}

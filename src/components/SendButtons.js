@@ -73,10 +73,10 @@ const SendButtons = ({data, total, resetForm}) => {
                     <GrMail className='text-xl'/>
                 </button>
             </div>
-            <div className='relative w-full flex flex-col sm:flex-row justify-between items-center gap-0 my-2 rounded-[35px]'>
+            <div className='relative w-full justify-between items-center gap-0 my-2 rounded-[35px] inputWhatsappContainer'>
                 <input 
-                    className='w-full h-[45px] rounded-t-3xl sm:rounded-tr-none sm:rounded-l-3xl text-center sm:text-left border border-[#7a3e8870] sm:border-r-0 shadow-md sm:pl-6 italic font-normal focus:outline-none'
-                    placeholder='ingrese el número al que desea enviar'
+                    className='inputWhatsapp'
+                    placeholder='ingrese el número de WhatsApp'
                     type='number'
                     value={waNumber}
                     onChange={(e) => setWaNumber(e.target.value)}
@@ -86,13 +86,13 @@ const SendButtons = ({data, total, resetForm}) => {
                         <ReactWhatsapp 
                             number={waNumber} 
                             message={bodyResultWa(data, total)} 
-                            className='flex justify-center items-center gap-3 h-[45px] w-full bg-[#722882] text-white font-semibold px-3 py-1 rounded-b-3xl sm:rounded-bl-none sm:rounded-r-3xl shadow-md outline-none focus:outline-none tracking-widest'
+                            className='buttonWhatsapp'
                         >
                             ENVIAR 
                             <ImWhatsapp className='text-xl'/>
                         </ReactWhatsapp>
                     ) : (
-                        <div className='flex justify-center items-center gap-3 h-[45px] w-full bg-[#722882] text-white font-semibold px-3 py-1 rounded-b-3xl sm:rounded-bl-none sm:rounded-r-3xl shadow-md outline-none focus:outline-none tracking-widest'>
+                        <div className='buttonWhatsapp'>
                             CARGAR NUMERO 
                             <ImWhatsapp className='text-xl'/>
                         </div>
