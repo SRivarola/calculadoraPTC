@@ -11,8 +11,8 @@ const InputAyunoGroup = ({onChange, checked}) => {
             </label>
             <input
                 id="1"
-                type='radio' 
-                name='tg3'
+                type='checkbox' 
+                name='tg3A'
                 value={5}
                 onChange={onChange}
                 checked={checked === 5}
@@ -26,8 +26,8 @@ const InputAyunoGroup = ({onChange, checked}) => {
             </label>
             <input
                 id="2"
-                type='radio' 
-                name='tg3'
+                type='checkbox' 
+                name='tg3B'
                 value={1}
                 onChange={onChange}
                 checked={checked === 1}

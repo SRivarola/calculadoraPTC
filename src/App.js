@@ -31,6 +31,38 @@ export default function App() {
     })
   }
 
+  const handleTG3Change = (e) => {
+    const inputName = e.target.name
+    const inputValue = Number(e.target.value)
+
+    if(inputName == 'tg3A'){
+      console.log('estoy aca')
+      inputValue == tg3 
+      ? setData({
+          ...data,
+          tg3: false
+        })
+      : setData({
+        ...data,
+        tg3: inputValue
+      })
+    }
+
+    if(inputName == 'tg3B'){
+      console.log('estoy aca')
+      inputValue == tg3 
+      ? setData({
+          ...data,
+          tg3: false
+        })
+      : setData({
+        ...data,
+        tg3: inputValue
+      })
+    }
+
+  }
+ 
   const resetForm = () => {
     setData(initialValues)
   }
@@ -57,7 +89,7 @@ export default function App() {
         </div>
 
         <form className='relative w-full rounded-lg border-2 border-[#982781] pt-14 mt-[-40px] bg-white'>
-          <InputAyunoGroup onChange={handleChange} checked={data.tg3}/>
+          <InputAyunoGroup onChange={handleTG3Change} checked={data.tg3}/>
           <InputGroup
             label='TG previo <177 al menos una vez:'
             name='tgPrevio'

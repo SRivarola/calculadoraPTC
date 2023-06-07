@@ -28,9 +28,8 @@ const SendButtons = ({data, total, resetForm}) => {
     }, [])
 
     useEffect(() => {
-        const {tg3, tgPrevio, secundarios, pancreatitis, abdominal, historia, respuesta, edad} = data
-        if (tg3 !== false && 
-            tgPrevio !== false && 
+        const {tgPrevio, secundarios, pancreatitis, abdominal, historia, respuesta, edad} = data
+        if (tgPrevio !== false && 
             secundarios !== false && 
             pancreatitis !== false && 
             abdominal !== false && 
