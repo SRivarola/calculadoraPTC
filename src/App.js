@@ -36,7 +36,6 @@ export default function App() {
     const inputValue = Number(e.target.value)
 
     if(inputName == 'tg3A'){
-      console.log('estoy aca')
       inputValue == tg3 
       ? setData({
           ...data,
