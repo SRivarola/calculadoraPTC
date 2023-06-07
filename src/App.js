@@ -35,8 +35,8 @@ export default function App() {
     const inputName = e.target.name
     const inputValue = Number(e.target.value)
 
-    if(inputName == 'tg3A'){
-      inputValue == tg3 
+    if(inputName === 'tg3A'){
+      inputValue === tg3 
       ? setData({
           ...data,
           tg3: false
@@ -47,8 +47,8 @@ export default function App() {
       })
     }
 
-    if(inputName == 'tg3B'){
-      inputValue == tg3 
+    if(inputName === 'tg3B'){
+      inputValue === tg3 
       ? setData({
           ...data,
           tg3: false
