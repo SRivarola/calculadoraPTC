@@ -49,7 +49,6 @@ export default function App() {
     }
 
     if(inputName == 'tg3B'){
-      console.log('estoy aca')
       inputValue == tg3 
       ? setData({
           ...data,
