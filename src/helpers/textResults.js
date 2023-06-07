@@ -12,7 +12,7 @@ export const resultadoFCS = (total) => {
 
 export const bodyResultWa = ({tg3, tgPrevio, secundarios, pancreatitis, abdominal, historia, respuesta, edad}, total) =>{
     return `
-    Resultados FCS:\n
+    Resultados Score FCS:\n
     ${
         Number(tg3) === 5 
         ? `- TG en ayuno en 3 mediciones consecutivas >880mg/dl: SI\n`
@@ -32,7 +32,7 @@ export const bodyResultWa = ({tg3, tgPrevio, secundarios, pancreatitis, abdomina
 
 export const bodyResultEmail = ({tg3, tgPrevio, secundarios, pancreatitis, abdominal, historia, respuesta, edad}, total) =>{
     return `
-    Resultados%20FCS:%0A
+    Resultados%20Score%20FCS:%0A
     ${
         Number(tg3) === 5 
         ? `-%20TG%20en%20ayuno%20en%203%20mediciones%20consecutivas%20>880mg/dl:%20SI%0A`

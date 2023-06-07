@@ -20,7 +20,7 @@ const SendButtons = ({data, total, resetForm}) => {
     }
 
     const enviarMail = () => {
-        window.open(`mailto:?subject=Resultados%20FCS&body=${bodyResultEmail(data, total)}`)
+        window.open(`mailto:fcs@ptcbio.com?subject=Resultados%20FCS&body=${bodyResultEmail(data, total)}`)
     }
 
     useEffect(() => {

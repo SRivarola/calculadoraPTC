@@ -5,7 +5,7 @@ const DocuPDF = ({data, result, total}) => {
     <Document>
         <Page size={'A4'}>
             <View style={styles.body}>
-                <Text style={styles.title}>Resultados:</Text>
+                <Text style={styles.title}>Resultados Score FCS:</Text>
                 <View style={styles.container}>
                     <View style={styles.row}>
                         <Text>{'TG en ayuno >880mg/dl en 3 mediciones consecutivas:'}</Text>
