@@ -51,7 +51,7 @@ const SendButtons = ({data, total, resetForm}) => {
                     pdfButton && 
                     <PDFDownloadLink 
                         document={<DocuPDF data={data} result={data} total={total} probabilidad={resultadoFCS(total)} />}
-                        fileName='resultadosFCS.pdf'
+                        fileName='Resultados_Score_FCS.pdf'
                         className='flex justify-center items-center h-[45px] w-full bg-[#722882] text-white font-semibold px-3 py-1 rounded-3xl shadow-md'
                     >
                         {
