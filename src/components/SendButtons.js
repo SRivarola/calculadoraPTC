@@ -28,8 +28,10 @@ const SendButtons = ({data, total, resetForm}) => {
     }, [])
 
     useEffect(() => {
-        const {tgPrevio, secundarios, pancreatitis, abdominal, historia, respuesta, edad} = data
-        if (tgPrevio !== false && 
+        const {tg3_885, tg3_1770, tgPrevio, secundarios, pancreatitis, abdominal, historia, respuesta, edad} = data
+        if (tg3_885 !== false &&
+            tg3_1770 !== false &&
+            tgPrevio !== false && 
             secundarios !== false && 
             pancreatitis !== false && 
             abdominal !== false && 
@@ -50,7 +52,7 @@ const SendButtons = ({data, total, resetForm}) => {
                 {
                     pdfButton && 
                     <PDFDownloadLink 
-                        document={<DocuPDF data={data} result={data} total={total} probabilidad={resultadoFCS(total)} />}
+                        document={<DocuPDF data={data} total={total} probabilidad={resultadoFCS(total)} />}
                         fileName='Resultados Score FCS.pdf'
                         className='flex justify-center items-center h-[45px] w-full bg-[#722882] text-white font-semibold px-3 py-1 rounded-3xl shadow-md'
                     >
@@ -98,18 +100,18 @@ const SendButtons = ({data, total, resetForm}) => {
                     )
                 }
             </div>
-            <button
-                onClick={resetAllValues} 
-                className='w-full h-[45px] rounded-3xl border border-[#7a3e8870] mt-10 mb-4 py-2 shadow-md font-semibold tracking-widest'
-            >
-                RESETEAR RESULTADOS
-            </button>
           </>) : (
-            <div className='textoResultado w-full flex flex-col justify-center items-center gap-4 my-6'>
+            <div className='textoResultado w-full flex flex-col justify-center items-center gap-4 mt-6 font-semibold'>
                 Para enviar los resultados se deben completar todos los campos
             </div>
           )
         }
+        <button
+            onClick={resetAllValues} 
+            className='w-full h-[45px] rounded-3xl border border-[#7a3e8870] my-4 py-2 shadow-md font-semibold tracking-widest'
+        >
+            RESETEAR RESULTADOS
+        </button>
     </>
   )
 }

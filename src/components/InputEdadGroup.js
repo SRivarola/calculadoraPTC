@@ -5,6 +5,21 @@ const InputEdadGroup = ({onChange, checked}) => {
             <p className="font-semibold">Edad de inicio de síntomas:</p>
         </div>
         <div className="flex justify-end items-center gap-5">
+            <label className="w-full flex justify-end items-center gap-2 cursor-pointer" htmlFor='edad0'>
+                <p className={`${checked === 0 ? 'font-semibold' : ''}`}>{'> 40 años'}</p>
+                <span className={`flex justify-center items-center w-[20px] h-[20px] rounded-full bg-white border border-[#982781] labelPintado ${checked === 0 ? ' after:opacity-100' : ' after:opacity-0'}`}></span>
+            </label>
+            <input
+                id='edad0'
+                type='radio' 
+                name='edad'
+                value={0}
+                onChange={onChange}
+                checked={checked === 0}
+                className="hidden"
+            />
+        </div>
+        <div className="flex justify-end items-center gap-5">
             <label className="w-full flex justify-end items-center gap-2 cursor-pointer" htmlFor='edad1'>
                 <p className={`${checked === 1 ? 'font-semibold' : ''}`}>{'< 40 años'}</p>
                 <span className={`flex justify-center items-center w-[20px] h-[20px] rounded-full bg-white border border-[#982781] labelPintado ${checked === 1 ? ' after:opacity-100' : ' after:opacity-0'}`}></span>
@@ -48,6 +63,11 @@ const InputEdadGroup = ({onChange, checked}) => {
                 checked={checked === 3}
                 className="hidden"
             />
+        </div>
+        <div className="w-[100%] font-semibold text-[11px] text-right text-red-600 italic pr-2">
+            {
+              checked === false && '*campo obligatorio'
+            }
         </div>
     </div>
   )

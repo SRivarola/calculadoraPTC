@@ -6,7 +6,8 @@ import Resultado from './components/Resultado'
 import SendButtons from './components/SendButtons'
 
 const initialValues = {
-  tg3: false,
+  tg3_885: false,
+  tg3_1770: false,
   tgPrevio: false,
   secundarios: false,
   pancreatitis: false,
@@ -19,8 +20,8 @@ const initialValues = {
 export default function App() {
 
   const [data, setData] = useState(initialValues)
-  const {tg3, tgPrevio, secundarios, pancreatitis, abdominal, historia, respuesta, edad} = data
-  const [total, setTotal] = useState(tg3 + tgPrevio + secundarios + pancreatitis + abdominal + historia + respuesta + edad)
+  const {tg3_885, tg3_1770,tgPrevio, secundarios, pancreatitis, abdominal, historia, respuesta, edad} = data
+  const [total, setTotal] = useState(tg3_885 + tg3_1770 + tgPrevio + secundarios + pancreatitis + abdominal + historia + respuesta + edad)
 
   const handleChange = (e) => {
     const inputName = e.target.name
@@ -30,48 +31,18 @@ export default function App() {
       [inputName]: inputValue
     })
   }
-
-  const handleTG3Change = (e) => {
-    const inputName = e.target.name
-    const inputValue = Number(e.target.value)
-
-    if(inputName === 'tg3A'){
-      inputValue === tg3 
-      ? setData({
-          ...data,
-          tg3: false
-        })
-      : setData({
-        ...data,
-        tg3: inputValue
-      })
-    }
-
-    if(inputName === 'tg3B'){
-      inputValue === tg3 
-      ? setData({
-          ...data,
-          tg3: false
-        })
-      : setData({
-        ...data,
-        tg3: inputValue
-      })
-    }
-
-  }
- 
+  
   const resetForm = () => {
     setData(initialValues)
   }
 
   useEffect(() => {
     setTimeout(() => {
-      setTotal(tg3 + tgPrevio + secundarios + pancreatitis + abdominal + historia + respuesta + edad)
+      setTotal(tg3_885 + tg3_1770 + tgPrevio + secundarios + pancreatitis + abdominal + historia + respuesta + edad)
     }, 100);
 
    
-  }, [tg3, tgPrevio, secundarios, pancreatitis, abdominal, historia, respuesta, edad])
+  }, [tg3_885, tg3_1770, tgPrevio, secundarios, pancreatitis, abdominal, historia, respuesta, edad])
   
   return (
     <>
@@ -80,14 +51,17 @@ export default function App() {
           <div className='relative w-[100%] md:w-[85%] h-[80px] py-2 px-[3%] md:px-[5%] flex justify-center items-center gap-3 md:gap-5 rounded-lg text-white backgroundGradient'>
             <img src='./celula.jpg' alt='imagen de celula' className='relative rounded-full w-[45px] md:w-[65px]'/>
             <div>
-              <h2 className='titulo'>Triglicéridos mayores a 880 mg/dl*</h2>
+              <h2 className='titulo'>Triglicéridos mayores a 885 mg/dl*</h2>
               <p className='text-xs'>*Sin respuesta a terapia hipolipemiante convencional</p>
             </div>
           </div>
         </div>
 
         <form className='relative w-full rounded-lg border-2 border-[#982781] pt-14 mt-[-40px] bg-white'>
-          <InputAyunoGroup onChange={handleTG3Change} checked={data.tg3}/>
+          <InputAyunoGroup 
+            onChange={handleChange} 
+            checked={{ tg3_885: data.tg3_885, tg3_1770: data.tg3_1770 }}
+          />
           <InputGroup
             label='TG previo <177 al menos una vez:'
             name='tgPrevio'
@@ -120,7 +94,7 @@ export default function App() {
             checked={data.abdominal}
           />
           <InputGroup
-            label='Ausencia de historia familiar de hiperlipemia familiar combinada:'
+            label='Sin antecedente de Hiperlipemia Familiar Combinada:'
             name='historia'
             id='historia'
             onChange={handleChange}
